@@ -10,7 +10,7 @@ const getUser = async (req: Request, res: Response, next: NextFunction) => {
     sendResponse(res, {
       statusCode: httpStatus.OK,
       success: true,
-      message: "User profile retrieved successfully",
+      message: "User profile retrieved successfully!",
       data: data,
     });
   } catch (error) {
@@ -30,7 +30,7 @@ const updateUserProfile = async (
     sendResponse(res, {
       statusCode: httpStatus.OK,
       success: true,
-      message: "Profile updated successfully",
+      message: "Profile updated successfully!",
       data: result,
     });
   } catch (error) {

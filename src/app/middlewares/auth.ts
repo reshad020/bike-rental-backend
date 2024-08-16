@@ -19,6 +19,6 @@ export const authenticateJwt = (
     console.log(decoded);
     next();
   } catch (error) {
-    next(Error("You have no access to this route"));
+    next(Error("You have no access to this route!"));
   }
 };
