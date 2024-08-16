@@ -15,8 +15,6 @@ export const authenticateJwt = (
   try {
     const decoded = jwt.verify(token, config.jwt_access_token as string);
     req.user = decoded as JwtPayload;
-    // console.log(req.user);
-    console.log(decoded);
     next();
   } catch (error) {
     next(Error("You have no access to this route!"));

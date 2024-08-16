@@ -12,7 +12,6 @@ const createBooking = async (
 ) => {
   try {
     const userId = await req.user?.userId;
-    console.log("userId from controller", userId);
     const userIdObjectId = new mongoose.Types.ObjectId(userId);
     const { bikeId, startTime } = await req.body;
     const bikeObjectId = new mongoose.Types.ObjectId(bikeId);

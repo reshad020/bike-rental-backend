@@ -15,7 +15,6 @@ const createBookingIntoDb = async (
   if (!bike) {
     throw new Error("No bike Found with this Id");
   }
-  console.log("userId from service", validatedBooking.userId);
   const newBooking = await Booking.create({
     userId,
     bikeId: validatedBooking.bikeId,
@@ -51,7 +50,6 @@ const updateBikeReturnIntoDb = async (bookingId: string) => {
 
 const getBookingFromDb = async (userId: string) => {
   const userBookings = await Booking.find({ userId: userId });
-  console.log(userId, userBookings);
   if (userBookings.length === 0) {
     throw new Error("No bookings yet!");
   }
